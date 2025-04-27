@@ -3,59 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fix My Phone</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FixMyPhone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Navigation Bar -->
     <header>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#accessories">Accessories</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Home Section -->
-    <section id="home">
-        <h1>Welcome to Fix My Phone</h1>
-        <p>Your go-to place for mobile repairs and accessories</p>
+    <section id="home" class="home-section">
+        <h1>Welcome to FixMyPhone</h1>
+        <p>Your one-stop solution for mobile phone repairs and accessories.</p>
+        <a href="#services" class="cta-btn">Get Started</a>
     </section>
 
     <!-- Services Section -->
-    <section id="services">
+    <section id="services" class="services-section">
         <h2>Our Services</h2>
-        <ul>
-            <li>Screen Replacement</li>
-            <li>Battery Replacement</li>
-            <li>Mobile Accessories</li>
-            <li>Software Repair</li>
-        </ul>
+        <div class="services-container">
+            <div class="service-card">
+                <h3>Screen Repair</h3>
+                <p>Cracked or damaged screen? We offer quick and affordable repairs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Battery Replacement</h3>
+                <p>Need more battery life? Let us replace your old battery with a new one.</p>
+            </div>
+            <div class="service-card">
+                <h3>Software Updates</h3>
+                <p>Get your phone's software updated to improve performance and security.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing">
-        <h2>Pricing</h2>
-        <p>Check out our affordable prices</p>
-        <ul>
-            <li>Screen Replacement: ₹X</li>
-            <li>Battery Replacement: ₹Y</li>
-            <li>Accessories: ₹Z</li>
-        </ul>
+    <!-- Accessories Section -->
+    <section id="accessories" class="accessories-section">
+        <h2>Mobile Accessories</h2>
+        <p>Explore our range of mobile accessories including cases, chargers, and more!</p>
+        <a href="#" class="cta-btn">Shop Now</a>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="contact-section">
         <h2>Contact Us</h2>
-        <p>For more details or to request a repair, reach out to us!</p>
+        <p>Have any questions? Reach out to us and we'll be happy to help!</p>
+        <form action="#" method="post">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+            <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Fix My Phone. All rights reserved.</p>
+        <p>&copy; 2025 FixMyPhone. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
