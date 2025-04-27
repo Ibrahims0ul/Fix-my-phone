@@ -1,365 +1,89 @@
-/* Global styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    padding: 15px 0;
+/* Set up the body with background image */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('images/background.jpeg'); /* Ensure the path is correct */
+  background-size: cover; /* Cover the whole page */
+  background-repeat: no-repeat; /* Do not repeat the background */
+  background-position: center center; /* Center the image */
+  height: 100vh; /* Full screen height */
+  color: #fff; /* Set text color to white */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+/* Overlay effect on the background image */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Black overlay with opacity */
+  z-index: 1;
 }
 
-nav ul li {
-    margin: 0 20px;
+/* Main content wrapper */
+.container {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s;
+/* Heading styling */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #ffd700;
+/* Paragraph and text styling */
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-/* Home Section */
-.home-section {
-    position: relative;
-    height: 100vh;
-    background: url('images/background.jpeg')
+/* Button styling */
+button {
+  padding: 10px 20px;
+  background-color: #f39c12; /* Yellow-orange color */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+button:hover {
+  background-color: #e67e22; /* Darker shade on hover */
 }
 
-.hero-text h1 {
-    font-size: 50px;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 20px;
-}
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
 
-.hero-text p {
-    font-size: 22px;
-    margin-bottom: 30px;
-}
-
-.cta-btn {
-    padding: 15px 30px;
-    background-color: #ffd700;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.cta-btn:hover {
-    background-color: #e6c200;
-}
-
-/* Services Section */
-.services-section {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.services-section h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    font-family: 'Playfair Display', serif;
-}
-
-.services-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.service-card {
-    background-color: #f4f4f4;
-    padding: 30px;
-    width: 30%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-}
-
-.service-card h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
-}
-
-.service-card p {
-    font-size: 16px;
-}
-
-/* Accessories Section */
-.accessories-section {
-    padding: 50px 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-}
-
-.accessories-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
-}
-
-.accessories-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.accessories-section .cta-btn {
-    background-color: #ffd700;
-    color: #333;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
-}
-
-.contact-section form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-section input, .contact-section textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-section button {
-    padding: 15px 30px;
-    background-color: #ffd700;
-    color: #333;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-section button:hover {
-    background-color: #e6c200;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}/* Global styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-header a:hover {
-    color: #ffd700;
-}
-
-/* Home Section */
-.home-section {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.home-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.home-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.cta-btn {
-    padding: 10px 20px;
-    background-color: #ffd700;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.cta-btn:hover {
-    background-color: #e6c200;
-}
-
-/* Services Section */
-.services-section {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.services-section h2 {
-    font-size: 30px;
-    margin-bottom: 40px;
-}
-
-.services-container {
-    display: flex;
-    justify-content: space-around;
-}
-
-.service-card {
-    background-color: #f4f4f4;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-}
-
-.service-card h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.service-card p {
-    font-size: 16px;
-}
-
-/* Accessories Section */
-.accessories-section {
-    padding: 50px 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-}
-
-.accessories-section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.accessories-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.accessories-section .cta-btn {
-    background-color: #ffd700;
-    color: #333;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.contact-section form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-section input, .contact-section textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-section button {
-    padding: 10px 20px;
-    background-color: #ffd700;
-    color: #333;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-section button:hover {
-    background-color: #e6c200;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+  .container {
+    padding: 15px;
+  }
 }
