@@ -1,79 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FIX MY Mobile</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixMyPhone - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <h1>FIX MY Mobile</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Navigation Bar -->
+<nav>
+  <div class="logo">FixMyPhone</div>
+  
+  <div class="menu-toggle" id="menu-toggle">
+    &#9776;
+  </div>
 
-    <section id="home">
-        <div class="home-content">
-            <h2>Get Your Mobile Repaired with Ease</h2>
-            <p>Fast and Reliable Service for All Mobile Brands</p>
-        </div>
-    </section>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-list">
-            <div class="service-item">
-                <h3>Screen Repair</h3>
-                <p>Broken screen? We can replace it with top-quality parts.</p>
-            </div>
-            <div class="service-item">
-                <h3>Battery Replacement</h3>
-                <p>We offer battery replacements for all mobile devices.</p>
-            </div>
-            <div class="service-item">
-                <h3>Water Damage Repair</h3>
-                <p>We can help fix mobile devices affected by water damage.</p>
-            </div>
-        </div>
-    </section>
+<header>
+  <h1>Welcome to FixMyPhone</h1>
+  <p>Your One-Stop Mobile Repair and Accessories Solution</p>
+</header>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have a question or need service? Reach out to us below:</p>
-        <form action="#" method="POST">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+<section class="categories">
+  <!-- Category cards same as before -->
+  <div class="category-card">
+    <img src="https://img.icons8.com/ios-filled/100/00BFFF/maintenance.png" alt="Refurbishing">
+    <h3>Refurbishing</h3>
+  </div>
 
-    <section id="reviews">
-        <h2>Customer Reviews</h2>
-        <p>Here's what our happy customers have to say:</p>
-        <div class="review">
-            <p>"Great service! My phone was repaired within hours."</p>
-            <span>- John D.</span>
-        </div>
-        <div class="review">
-            <p>"Affordable and reliable repair services for my phone!"</p>
-            <span>- Sarah W.</span>
-        </div>
-    </section>
+  <div class="category-card">
+    <img src="https://img.icons8.com/ios-filled/100/00BFFF/charging.png" alt="Accessories">
+    <h3>Accessories</h3>
+  </div>
 
-    <footer>
-        <p>&copy; 2025 FIX MY Mobile. All rights reserved.</p>
-    </footer>
+  <div class="category-card">
+    <img src="https://img.icons8.com/ios-filled/100/00BFFF/settings.png" alt="Small Parts">
+    <h3>Small Parts</h3>
+  </div>
+
+  <div class="category-card">
+    <img src="https://img.icons8.com/ios-filled/100/00BFFF/android-os.png" alt="For Android">
+    <h3>For Android</h3>
+  </div>
+
+  <div class="category-card">
+    <img src="https://img.icons8.com/ios-filled/100/00BFFF/iphone-x.png" alt="For iPhone">
+    <h3>For iPhone</h3>
+  </div>
+
+  <div class="category-card">
+    <img src="https://img.icons8.com/ios-filled/100/00BFFF/tools.png" alt="Tools">
+    <h3>Tools</h3>
+  </div>
+
+  <div class="category-card">
+    <img src="https://img.icons8.com/ios-filled/100/00BFFF/ipad.png" alt="For iPad">
+    <h3>For iPad</h3>
+  </div>
+
+  <div class="category-card">
+    <img src="https://img.icons8.com/ios-filled/100/00BFFF/samsung.png" alt="For Samsung">
+    <h3>For Samsung</h3>
+  </div>
+
+  <div class="category-card">
+    <img src="https://img.icons8.com/ios-filled/100/00BFFF/macbook.png" alt="For MacBook">
+    <h3>For MacBook</h3>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2025 FixMyPhone. All rights reserved.</p>
+</footer>
+
+<!-- Small Script to Toggle the Menu -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
