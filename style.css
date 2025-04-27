@@ -1,89 +1,150 @@
-/* Reset some default styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Set up the body with background image */
 body {
-  font-family: 'Arial', sans-serif;
-  background-image: url('images/background.jpeg'); /* Ensure the path is correct */
-  background-size: cover; /* Cover the whole page */
-  background-repeat: no-repeat; /* Do not repeat the background */
-  background-position: center center; /* Center the image */
-  height: 100vh; /* Full screen height */
-  color: #fff; /* Set text color to white */
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Overlay effect on the background image */
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Black overlay with opacity */
-  z-index: 1;
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
-/* Main content wrapper */
-.container {
-  position: relative;
-  z-index: 2;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  border-radius: 10px;
-  max-width: 90%;
-  max-height: 90%;
+header .logo h1 {
+    font-size: 36px;
+    font-weight: bold;
 }
 
-/* Heading styling */
-h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: bold;
+nav ul {
+    list-style-type: none;
+    margin-top: 20px;
 }
 
-/* Paragraph and text styling */
-p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  line-height: 1.5;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-/* Button styling */
-button {
-  padding: 10px 20px;
-  background-color: #f39c12; /* Yellow-orange color */
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-button:hover {
-  background-color: #e67e22; /* Darker shade on hover */
+#home {
+    background-color: #2a2a2a;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
 }
 
-/* Media query for mobile responsiveness */
-@media only screen and (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-  
-  p {
-    font-size: 1rem;
-  }
+#home h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
 
-  .container {
-    padding: 15px;
-  }
+#home p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+#reviews .review {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#reviews .review p {
+    font-size: 16px;
+}
+
+#reviews .review span {
+    font-size: 14px;
+    color: #777;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
 }
