@@ -1,1 +1,145 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #0a0a23;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1512499617640-c2f9992f0d9b?fit=crop&w=1600&q=80') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #ff4b2b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background: #ff1c00;
+}
+
+/* Services */
+.services {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+.service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-items .item {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+/* Accessories */
+.accessories {
+    background: #e9ecef;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.accessories h2 {
+    margin-bottom: 20px;
+}
+
+/* Contact */
+.contact {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #0a0a23;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-items {
+        flex-direction: column;
+        align-items: center;
+    }
+}
