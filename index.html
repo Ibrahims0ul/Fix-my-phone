@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,77 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fix My Phone</title>
     <link rel="stylesheet" href="style.css">
-    <!-- AOS Animation Library -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header data-aos="fade-down">
-        <div class="container">
-            <h1>Fix My Phone</h1>
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#accessories">Accessories</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+
+    <header>
+        <h1>Fix My Phone</h1>
+        <nav>
+            <a href="#accessories">Accessories</a>
+            <a href="#repairing">Repairing Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <section class="hero" data-aos="fade-up">
-        <div class="container">
-            <h2>Your One-Stop Mobile Repair & Accessories Shop</h2>
-            <p>Fast, Affordable, and Reliable Service!</p>
-            <a href="#contact" class="btn">Get Help Now</a>
+    <section id="accessories" class="section">
+        <h2>Accessories</h2>
+        <div class="items">
+            <div class="item">11D Tempered Glass</div>
+            <div class="item">Privacy Tempered Glass</div>
+            <div class="item">Matte Glass</div>
+            <div class="item">Chargers</div>
+            <div class="item">Cables</div>
+            <div class="item">Silicon Back Covers</div>
+            <div class="item">White Back Covers</div>
+            <div class="item">Memory Cards</div>
         </div>
     </section>
 
-    <section id="services" class="services" data-aos="fade-right">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-items">
-                <div class="item" data-aos="zoom-in">
-                    <h3>Screen Replacement</h3>
-                    <p>Cracked screen? We replace it quickly and affordably.</p>
-                </div>
-                <div class="item" data-aos="zoom-in" data-aos-delay="100">
-                    <h3>Battery Replacement</h3>
-                    <p>Is your phone dying fast? Get a brand new battery installed.</p>
-                </div>
-                <div class="item" data-aos="zoom-in" data-aos-delay="200">
-                    <h3>Water Damage Repair</h3>
-                    <p>Save your phone after accidental water damage.</p>
-                </div>
-            </div>
-        </div>
+    <section id="repairing" class="section">
+        <h2>Repairing Services</h2>
+        <ul>
+            <li>Battery Replacement</li>
+            <li>Display Change (Cracked/Not Working)</li>
+            <li>Charging Problem Fix</li>
+            <li>All Repairs at Affordable Prices (Based on Phone Model)</li>
+        </ul>
     </section>
 
-    <section id="accessories" class="accessories" data-aos="fade-left">
-        <div class="container">
-            <h2>Accessories</h2>
-            <p>We offer chargers, cases, earphones, and much more!</p>
-        </div>
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>For inquiries, repairs, or accessories, contact us on WhatsApp!</p>
+        <a href="https://wa.me/YOURNUMBER" target="_blank" class="whatsapp-button">WhatsApp Now</a>
     </section>
 
-    <section id="contact" class="contact" data-aos="fade-up">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Need help? Message us now!</p>
-            <a href="mailto:your-email@example.com" class="btn">Email Us</a>
-        </div>
-    </section>
-
-    <footer data-aos="fade-up">
-        <div class="container">
-            <p>&copy; 2025 Fix My Phone. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 Fix My Phone. All rights reserved.</p>
     </footer>
 
-    <!-- AOS Library JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000, // Animation duration in milliseconds
-        once: true      // Animate only once
-      });
-    </script>
 </body>
 </html>
